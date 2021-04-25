@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			film
+		</div>
+		<nav>
+			<ul>
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'film:index' %}">Film</a></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>
