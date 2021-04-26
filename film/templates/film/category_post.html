@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block addPost %}
+	<div class="add-post">
+		<h2><a href="{% url 'film:index' %}">Add Post</a></h2>
+	</div>
+{% endblock addPost %}
+
 {% block category %}
 	<div class="category">
 		<h4>Menampilkan data berdasarkan kategori</h4>
@@ -18,9 +24,11 @@
 		{% endfor %}
 	</ul>
 	<br>
-	<h3>{{posts.headline}}</h3>
-	<h4>{{posts.publish}}</h4>
-	<h5><b>Category : </b>{{posts.category}}</h5>
-	<p>{{posts.body}}</p>
-	
+	{% for post in posts %}
+		<a href="{% url 'film:detail' slugInput=post.slug %}"><h3>{{post.headline}}</h3></a>
+		<h4>{{post.publish}}</h4>
+		<h5><b>Category : </b>{{post.category}}</h5>
+		<p>{{post.body | truncatechars:150}}</p>
+		<br>
+	{% endfor %}
 {% endblock contents %}

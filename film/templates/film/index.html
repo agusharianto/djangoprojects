@@ -6,8 +6,21 @@
 	</div>
 {% endblock addPost %}
 
-{% block contents %}
+{% block category %}
+	<div class="category">
+		<h4>Menampilkan data berdasarkan kategori</h4>
+	</div>
+{% endblock category %}
 
+{% block contents %}
+	<ul>
+		{% for data_category in categorys %}
+			<li>
+				<a href="{% url 'film:category' categoryInput=data_category.category %}">{{data_category.category}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<br>
 	{% for post in posts %}
 		<a href="{% url 'film:detail' slugInput=post.slug %}"><h3>{{post.headline}}</h3></a>
 		<h4>{{post.publish}}</h4>

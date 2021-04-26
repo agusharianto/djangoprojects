@@ -9,6 +9,10 @@
 	color: blue;
 	font-size: 15px;
 }
+.category h4{
+	margin-bottom: 15px;
+	font-weight: bolder;
+}
 
 h3 {
 	font-weight: bolder;
@@ -32,4 +36,8 @@ p {
 	margin-top: 10px;
 	padding:0 15px;
 	font-size: 15px;
+}
+ul li {
+	display: inline-block;
+	padding-right: 10px;
 }
