@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 
-{% block contents %}
+{% block addPost %}
 	<div class="add-post">
 		<h2><a href="{% url 'film:index' %}">Add Post</a></h2>
 	</div>
+{% endblock addPost %}
+
+{% block contents %}
+
+	{% for post in posts %}
+		<a href="{% url 'film:detail' slugInput=post.slug %}"><h3>{{post.headline}}</h3></a>
+		<h4>{{post.publish}}</h4>
+		<h5><b>Category : </b>{{post.category}}</h5>
+		<p>{{post.body | truncatechars:150}}</p>
+		<br>
+	{% endfor %}
 {% endblock contents %}

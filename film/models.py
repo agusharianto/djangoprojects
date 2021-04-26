@@ -6,6 +6,7 @@ from django.utils.text import slugify
 class Post(models.Model):
 	headline = models.CharField(max_length=100)
 	body = models.TextField()
+	category = models.CharField(max_length=50, default='film favorit')
 	publish = models.DateTimeField(auto_now_add=True)
 	update = models.DateTimeField(auto_now=True)
 	image = models.ImageField(blank=True, upload_to="image/")
