@@ -7,5 +7,5 @@ urlpatterns = [
 	path('', views.index, name='index'),
 	path('post/<slugInput>/', views.detailPost, name='detail'),
 	path('category/<categoryInput>/', views.categoryPost, name='category'),
-	path('add/', views.addPost, name='addpost')
+	path('addpost/', views.addPost, name='addpost'),
 ]
