@@ -14,18 +14,20 @@ def index(request):
 	return render(request, 'film/index.html', context)
 
 def addPost(request):
-	add_form = addPost(request.POST or None)
+	addform = addPost(request.POST or None)
+	print(addform)
 	if request.method == 'POST':
-		if add_form.is_valid():
-			add_form.save()
+		if addform.is_valid():
+			addform.save()
 
 		return redirect('film:index')
 
 	context = {
-		'add_form':add_form,
+		'addform':addform,
 		'title':'Add Post',
 	}
-	return render(request, 'film/add_post.html', context)	
+	return render(request, 'film/add_post.html', context)
+
 def detailPost(request, slugInput):
 	posts = Post.objects.get(slug=slugInput)
 	categorys = Post.objects.values('category').distinct()
