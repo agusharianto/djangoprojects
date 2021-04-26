@@ -1,12 +1,7 @@
-from django import forms
+from django.forms import ModelForm
 from .models import Post
 
-class addPost(forms.ModelForm):
+class addPost(ModelForm):
 	class Meta:
 		model = Post
-		fields = [
-			'headline',
-			'body',
-			'category',
-			'image',
-		]
+		fields = '__all__'

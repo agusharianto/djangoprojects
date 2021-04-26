@@ -33,16 +33,14 @@ def categoryPost(request, categoryInput):
 	}
 	return render(request,'film/category_post.html', context)
 
-def addPost(request):
-	addform = addPost(request.POST or None)
-
-	if method.request == 'POST':
+def createPost(request):
+	addform = addPost(request.POST)
+	if request.method == 'POST':
 		if addform.is_valid():
 			addform.save()
-		return redirect('film:index')
-	
+			return redirect('film:index')
 	context = {
 		'title':'Add Post',
 		'addform':addform,
 	}
-	return render(request, 'film/add_post.html', context)	
+	return render(request, 'film/add_post.html', context)
