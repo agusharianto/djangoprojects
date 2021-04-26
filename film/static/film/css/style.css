@@ -1,0 +1,11 @@
+.add-post {
+	float: right;
+}
+.add-post h2 {
+	font-weight: lighter;
+}
+.add-post h2 a {
+	text-decoration: none;
+	color: blue;
+	font-size: 13px;
+}

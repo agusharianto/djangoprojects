@@ -1,11 +1,7 @@
 {% extends "base.html" %}
 
 {% block contents %}
-	<h2>Film Terbaru</h2>
-	<ul>
-		<li>Naruto</li>
-		<li>Captain Tsubasa</li>
-		<li>Dragon Ball Z</li>
-		<li>Shinchan</li>
-	</ul>
+	<div class="add-post">
+		<h2><a href="{% url 'film:index' %}">Add Post</a></h2>
+	</div>
 {% endblock contents %}

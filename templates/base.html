@@ -1,23 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>{{title}}</title>
+	{% include "snippets/style.html" %}
+	{% include "film/snippets/style.html" %}
 </head>
 <body>
-	<header>
+	<div class="header">
 		<div class="logo">
-			film
+			<h2><a href="{% url 'index' %}">film</a></h2>
 		</div>
-		<nav>
+		<div class="nav">
 			<ul>
 				<li><a href="{% url 'index' %}">Home</a></li>
 				<li><a href="{% url 'film:index' %}">Film</a></li>
 			</ul>
-		</nav>
-	</header>
-
-	{% block contents %}
-		
-	{% endblock contents %}
+		</div>
+	</div>
+	<div class="container">
+		<div class="contents">
+			{% block contents %}
+				
+			{% endblock contents %}
+		</div>
+	</div>
 </body>
 </html>
