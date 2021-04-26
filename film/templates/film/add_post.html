@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
+{% block addPost %}
+	<div class="add-post">
+		<h3>Tambah Postingan</h3>
+	</div>
+{% endblock addPost %}
+
 {% block contents %}
-	<form method="POST">
+	<form class="form-field" method="POST">
 		{% csrf_token %}
 		<table>
 			{{addform.as_table}}
 		</table>
-		<br>
-		<button type="submit">Posting</button>
+		<button type="Submit"><span>Posting</span></button>
 	</form>
 {% endblock contents %}

@@ -3,18 +3,71 @@
 }
 .add-post h2 {
 	font-weight: lighter;
+	background: blue;
+	height: auto;
+	padding: 20px 0;
+	border-radius: 10px;
+	text-align: center;
+	margin: auto;
 }
-.add-post h2 a {
-	text-decoration: none;
-	color: blue;
+.add-post h3 {
+	font-weight: lighter;
+	font-family: sans-serif;
+	background: blue;
 	font-size: 15px;
+	height: auto;
+	border-radius: 10px;
+	padding: 30px 0;
+	color: yellow;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.add-post a {
+	text-decoration: none;
+	color: yellow;
+	font-size: 15px;
+}
+.add-post a:hover {
+	border-bottom: 2px solid yellow;
+	border-top: 2px solid yellow;
+	padding: 15px 0;
+	transition: .5s;
 }
 .category h4{
 	margin-bottom: 14px;
 	color: blue;
 	font-weight: bolder;
 }
-
+form {
+	padding: 25px 30px;
+}
+.form-field {
+	background: yellow;
+	width: 50%;
+	margin: auto;
+	border-radius: 15px;
+}
+.form-field table {
+	margin: auto;
+	padding: 20px 0;
+}
+.form-field button {
+	margin-top: 35px;
+	float: right;
+	padding: 10px 20px;
+	border: 1px solid yellow;
+	background: blue;
+	border-radius: 15px;
+}
+.form-field button:hover {
+	cursor: pointer;
+	transition: .5s;
+}
+.form-field span {
+	font-size: 15px;
+	color: yellow;
+}
 h3 {
 	font-weight: bolder;
 	color: blue;
