@@ -1,11 +1,5 @@
 {% extends "base.html" %}
 
-{% block addPost %}
-	<div class="add-post">
-		<h2><a href="{% url 'film:index' %}">Add Post</a></h2>
-	</div>
-{% endblock addPost %}
-
 {% block category %}
 	<div class="category">
 		<h4>Menampilkan data berdasarkan kategori</h4>
@@ -15,7 +9,7 @@
 {% block contents %}
 	<ul>
 		<li>
-			<a href="{% url 'film:index' %}">All Post</a>
+			<a href="{% url 'film:index' %}"><b>All Post</b></a>
 		</li>
 		{% for data_category in categorys %}
 			<li>
