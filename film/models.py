@@ -21,6 +21,11 @@ class Post(models.Model):
 
 class CommentPost(models.Model):
 	comment = models.CharField(max_length=2000)
+	slug = models.SlugField(blank=True, editable=False)
+
+	def save(self):
+		self.slug = slugify(self.comment)
+		super(CommentPost, self).save()
 
 	def __str__(self):
 		return '{}'.format(self.comment)

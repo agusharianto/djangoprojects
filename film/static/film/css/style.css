@@ -101,13 +101,18 @@ ul li a {
 }
 
 /*CSS  komentar*/
-.comment-post {
-	padding: 15px 15px;
+.add_comment {
+	padding-bottom: 15px;
+	margin: 0 15px;
 }
-.comment-post button {
-	margin-top: 10px;
-	margin-left: 230px;
-	padding: 5px 5px;
+.add_comment h4 {
 	background: blue;
+	padding: 5px 0;
+	width: 120px;
+	border-radius: 10px;
+	text-align: center;
+}
+.add_comment h4 a {
 	color: yellow;
+	font-size: 12px;
 }
