@@ -5,3 +5,8 @@ def index(request):
 		'title':'Home',
 	}
 	return render(request, 'index.html', context)
+def help(request):
+	context = {
+		'title':'Help',
+	}
+	return render(request, 'help.html', context)

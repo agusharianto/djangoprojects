@@ -45,16 +45,3 @@ def createPost(request):
 		'addform':addform,
 	}
 	return render(request, 'film/add_post.html', context)
-
-# def createComment(request, commentInput):
-# 	posts = Post.objects.get(comment=commentInput)
-# 	commentform = addComment(request.POST)
-# 	if request.method == 'POST':
-# 		if commentform.is_valid():
-# 			commentform.save()
-# 			return redirect('film:addcomment')
-# 	context = {
-# 		'commentform':commentform,
-# 	}
-	
-# 	return render(request, 'film/add_comment.html',context)

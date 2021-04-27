@@ -11,15 +11,13 @@
 		<div class="logo">
 			<h2><a href="{% url 'index' %}">film</a></h2>
 		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="{% url 'index' %}">Home</a></li>
-				<li><a href="{% url 'film:index' %}">Film</a></li>
-			</ul>
-		</div>
 	</div>
 	<div class="container">
 		<div class="contents">
+			{% block header %}
+				
+			{% endblock header %}
+			
 			{% block addPost %}
 				
 			{% endblock addPost %}
@@ -31,6 +29,19 @@
 			{% block contents %}
 				
 			{% endblock contents %}
+		</div>
+	</div>
+	<br>
+	<div class="footer">
+		<h2 class="logo">footer</h2>
+		<div class="list">
+			<ul>
+				<li>Follow me!</li>
+				<br>
+				<li><a href="https://www.instagram.com/bac0ke" target="blank">Instagram</a></li>
+				<li><a href="https://www.facebook.com/mr_bacoke" target="blank">Facebook</a></li>
+			</ul>
+			<p>copyright 2021 Bacoke Cinema Film | Bacoke Creator | <a href="{% url 'help' %}">Help</a></p>
 		</div>
 	</div>
 </body>

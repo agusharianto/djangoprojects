@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-
+{% block header %}
+	<div class="beranda">
+		<h3 class="btn-beranda"><a href="{% url 'film:index' %}">Back To List Film</a></h3>
+	</div>
+{% endblock header %}
 {% block category %}
 	<div class="category">
 		<h4>Menampilkan data berdasarkan kategori</h4>
