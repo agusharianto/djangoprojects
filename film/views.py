@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Post
-from .forms import addPost
+from .forms import addPost, addComment
 
 # Create your views here.
 def index(request):
@@ -11,6 +11,7 @@ def index(request):
 		'categorys':categorys,
 		'posts':posts,
 	}
+
 	return render(request, 'film/index.html', context)
 
 def detailPost(request, slugInput):
@@ -44,3 +45,27 @@ def createPost(request):
 		'addform':addform,
 	}
 	return render(request, 'film/add_post.html', context)
+
+def AddCommentPost(request):
+	commentform = addComment(request.POST)
+	if request.method == 'POST':
+		if commentform.is_valid():
+			commentform.save()
+			return redirect('film:addcomment')
+
+	context = {
+		'commentform':commentform,
+	}
+	return render(request,'film/detail_post.html', context)
+
+
+
+
+
+
+
+
+
+
+
+

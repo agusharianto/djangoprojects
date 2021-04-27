@@ -22,5 +22,13 @@
 	<h4>{{posts.publish}}</h4>
 	<h5><b>Category : </b>{{posts.category}}</h5>
 	<p>{{posts.body}}</p>
-	
+
+	<form class="comment-post" method="POST">
+		{% csrf_token %}
+		<table>
+			{{commentform.as_table}}
+		</table>
+		<br>
+		<button type="submit">Komentari</button>
+	</form>
 {% endblock contents %}

@@ -11,17 +11,17 @@
 	margin: auto;
 }
 .add-post h3 {
-	font-weight: lighter;
+	font-weight: bolder;
 	font-family: sans-serif;
 	background: blue;
 	font-size: 15px;
 	height: auto;
+	text-transform: uppercase;
 	border-radius: 10px;
 	padding: 30px 0;
 	color: yellow;
-	margin: auto;
-	text-align: center;
 	margin-bottom: 30px;
+	padding-left: 25px;
 }
 .add-post a {
 	text-decoration: none;
@@ -98,4 +98,16 @@ ul li {
 }
 ul li a {
 	font-size: 12px;
+}
+
+/*CSS  komentar*/
+.comment-post {
+	padding: 15px 15px;
+}
+.comment-post button {
+	margin-top: 10px;
+	margin-left: 230px;
+	padding: 5px 5px;
+	background: blue;
+	color: yellow;
 }

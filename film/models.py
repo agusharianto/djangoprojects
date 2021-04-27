@@ -18,3 +18,9 @@ class Post(models.Model):
 
 	def __str__(self):
 		return '{}.{}'.format(self.id, self.headline)
+
+class CommentPost(models.Model):
+	comment = models.CharField(max_length=2000)
+
+	def __str__(self):
+		return '{}'.format(self.comment)
